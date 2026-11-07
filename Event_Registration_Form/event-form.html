@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Event Registration Form</h1>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend><h2>Personal Information</h2></legend>
+
+        <label for="studentid">Student ID: </label>
+        <input type="number" id="studentid" name="studentid" minlength="6" maxlength="12" required />
+
+        <br /><br />
+
+        <label for="username">Name: </label>
+        <input type="text" id="username" name="username" required />
+
+        <br /><br />
+
+        <label for="department">Dapartment</label>
+        <input type="text" id="department" name="department" list="department-options" placeholder="Select your department" />
+
+        <datalist id="department-options">
+          <option value="BCA"></option>
+          <option value="MCA"></option>
+          <option value="BBA"></option>
+          <option value="BSC"></option>
+        </datalist>
+
+        <br /><br />
+
+        <label for="email">Email ID: </label>
+        <input type="email" id="email" name="email" required />
+
+        <br /><br />
+
+        <label for="phone">Phone Number: </label>
+        <input type="tel" id="phone" name="phone" maxlength="10" pattern="[0-9]{10}" />
+
+        <br /><br />
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend><h2>Preferences</h2></legend>
+        <p>Do you want to join the event?</p>
+        <input type="radio" id="yes" name="notifications" value="yes" />
+        <label for="yes">Yes</label>
+
+        <input type="radio" id="no" name="notifications" value="no" />
+        <label for="no">No</label>
+        <br /><br />
+
+        <label for="skill">Skill Level (1-10):</label><br />
+        <input type="range" id="skill" name="skill" min="1" max="10" value="5" />
+        <br /><br />
+
+        <label for="colour">Profile colour</label>
+        <input type="color" id="colour" name="colour" />
+        <br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend><h2>Workshop Choice</h2></legend>
+
+        <p>Which event do you prefer?</p>
+
+        <input type="radio" id="website_development" name="select" value="yes" />
+        <label for="website_development">website development</label>
+
+        <br /><br />
+
+        <input type="radio" id="hacking" name="select" value="yes" />
+        <label for="hacking">Hacking</label>
+
+        <br /><br />
+
+        <input type="radio" id="database" name="select" value="yes" />
+        <label for="database">Database designing</label>
+
+        <br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend><h2>About your thoughts</h2></legend>
+
+        <label for="review">About your thoughts:</label>
+          <textarea
+            id="review"
+            name="review"
+            rows="6"
+            cols="50"
+            maxlength="500"
+            placeholder="Describe your thoughts (maximum 500 characters)"></textarea>
+
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
